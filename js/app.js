@@ -1,47 +1,105 @@
 'use strict';
 
-var openHours = ['8am','9am'] 
+var days= ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+var openHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'] 
 var firstAndPike= {
   minCustomersPerHour: 23,
   maxCustomersPerHour: 60,
   averageCookiesPerCustomer: 6.3,
-  randomCustomersPerHour: function(min, max) {
+  randomCustomersPerHour: function(min, max) 
+  {function getRandomInt(max)
+      {
+          console.log (getRandomInt())
+    return Math.floor(Math.random()) * Math.floor(max);
+}
     
     return true;
   },
   getCookiesPerHour: function(){
-    // for (let i = 0; i < openHours.length; i++) {
-    // var customers = array[i];
-    // this.cookiesPerHour.push(randomCustomersPerHour() * this.averageCookiePerCustomer)
-    // }
+    for (let i = 0; i < openHours.length; i++) {
+    var customers = array[i];
+    this.cookiesPerHour.push(randomCustomersPerHour() * this.averageCookiePerCustomer)
+    }
   },
   customersPerHour: [],
   cookiesPerHour: [],
 }
 
+var seatac= { 
+    minCustomersPerHour: 23,
+    maxCustomersPerHour: 60,
+    averageCookiesPerCustomer: 6.3,
+    randomCustomersPerHour: function(min, max) 
+    {function getRandomInt(max)
+        {
+            console.log (getRandomInt())
+      return Math.floor(Math.random()) * Math.floor(max);}
 // var storeTwo= {
 //     name: 'SeaTac Airport'
 //     days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday']
 
 // }
 
+
+var seattleCenter={
+    minCustomersPerHour: 23,
+    maxCustomersPerHour: 60,
+    averageCookiesPerCustomer: 6.3,
+    randomCustomersPerHour: function(min, max) 
+    {function getRandomInt(max)
+        {
+            console.log (getRandomInt())
+      return Math.floor(Math.random()) * Math.floor(max);
+}
 // var storeThree= {
 //     name: 'Seattle Center'
 //     days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 // }
 
+
+var capitolHill={
+    minCustomersPerHour: 23,
+    maxCustomersPerHour: 60,
+    averageCookiesPerCustomer: 6.3,
+    randomCustomersPerHour: function(min, max) 
+    {function getRandomInt(max)
+        {
+            console.log (getRandomInt())
+      return Math.floor(Math.random()) * Math.floor(max);
+}
 // var storeFour= {
 //     name= 'Capitol Hill'
 
 // }
 
+
+var alki= {
+    minCustomersPerHour: 23,
+    maxCustomersPerHour: 60,
+    averageCookiesPerCustomer: 6.3,
+    randomCustomersPerHour: function(min, max) 
+    {function getRandomInt(max)
+        {
+            console.log (getRandomInt())
+      return Math.floor(Math.random()) * Math.floor(max);
+}
 // var storeFive= {
 //     name= 'Alki'
 // }
 
-// function getRandomInt(max) {
-//     return Math.floor(Math.random()) * Math.floor(max);
-// }
+function getRandomInt(max) {
+    return Math.floor(Math.random()) * Math.floor(max);
+}
+
+getCookiesPerHour: function(){
+    for (let i = 0; i < openHours.length; i++) {
+    var customers = array[i];
+    this.cookiesPerHour.push(randomCustomersPerHour() * this.averageCookiePerCustomer)
+    }
+  },
+  customersPerHour: [],
+  cookiesPerHour: [],
+}
 
 console.log(firstAndPike.randomCustomersPerHour())
 console.log(firstAndPike.getCookiesPerHour())
