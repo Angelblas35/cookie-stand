@@ -2,13 +2,25 @@
 
 var days= ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 var openHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'] 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;  
+}
+
+
 var firstAndPike= {
   minCustomersPerHour: 23,
   maxCustomersPerHour: 60,
   averageCookiesPerCustomer: 6.3,
+
+  for (var i = 0; i < minCustomersPerHour.length; i++) {}
+
   randomCustomersPerHour: function(min, max) 
-  {function getRandomInt(max)
-      {
+  
+  
+  
+  
           console.log (getRandomInt())
     return Math.floor(Math.random()) * Math.floor(max);
 }
@@ -20,6 +32,12 @@ var firstAndPike= {
     var customers = array[i];
     this.cookiesPerHour.push(randomCustomersPerHour() * this.averageCookiePerCustomer)
     }
+
+  getCustomersPerHour: function(){
+      for (let i= 0; i < openHours.length; i++) {
+          this.customersPerHour:
+      }
+  }
   },
   customersPerHour: [],
   cookiesPerHour: [],
