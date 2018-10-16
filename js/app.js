@@ -3,6 +3,21 @@
 // var days= ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
 var openHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
+function Store( minCustomersPerHour, maxCustomersPerHour, averageCookiesPerCustomer, locationName)
+
+this.customerEachHour= [];
+this.cookiesEachHour= [];
+this.totalDailyCookies= 0;
+this.minCustomersPerHour= minCustomersPerHour;
+this.maxCustomersPerHour= maxCustomersPerHour;
+this.averageCookiesPerCustomer= averageCookiesPerCustomer
+this.locationName= locationName
+
+
+new Store('23','65','6.3','firstAndPike')
+
+
+
 var firstAndPike = {
   minCustomersPerHour: 23,
   maxCustomersPerHour: 65,
@@ -295,51 +310,6 @@ capitolHill.calcCustomerEachHour = function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var seattleCenter={
-//     minCustomersPerHour: 23,
-//     maxCustomersPerHour: 60,
-//     averageCookiesPerCustomer: 6.3,
-//     randomCustomersPerHour: function(min, max)
-//     {function getRandomInt(max)
-//         {
-//             console.log (getRandomInt())
-//       return Math.floor(Math.random()) * Math.floor(max);
-// }
-// // var storeThree= {
-// //     name: 'Seattle Center'
-// //     days: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-// // }
-
-
-// var capitolHill={
-//     minCustomersPerHour: 23,
-//     maxCustomersPerHour: 60,
-//     averageCookiesPerCustomer: 6.3,
-//     randomCustomersPerHour: function(min, max)
-//     {function getRandomInt(max)
-//         {
-//             console.log (getRandomInt())
-//       return Math.floor(Math.random()) * Math.floor(max);
-// }
-// // var storeFour= {
-// //     name= 'Capitol Hill'
-
-// // }
 
 
 // var alki= {
