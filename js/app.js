@@ -98,8 +98,8 @@ seatac.calcTotalDailyCookies = function() {
 };
 seatac.calcTotalDailyCookies();
 
-firstAndPike.render = function() {
-  var ulEl = document.getElementById('pike');
+seatac.render = function() {
+  var ulEl = document.getElementById('airport');
 
   for(var i = 0; i < this.cookiesEachHour.length; i++) {
     var liEl = document.createElement('li');
@@ -112,6 +112,19 @@ firstAndPike.render = function() {
 };
 
 seatac.render();
+
+
+// 3rd store
+
+var seattleCenter = {
+  minCustomersPerHour: 3,
+  maxCustomersPerHour: 24,
+  averageCookiesPerCustomer: 1.2,
+  customersEachHour: [],
+  cookiesEachHour: [],
+  totalDailyCookies: 0,
+};
+
 
 
 
