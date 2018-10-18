@@ -29,6 +29,18 @@ new Store(11,38,3.7,'seattleCenter');
 new Store(20,38,2.3,'capitolHill');
 new Store(2,16,4.6,'alki');
 
+var locList = document.getElementById('loc-list');
+var storeForm = document.getElementById('store-form');
+var clearList = document.getElementById('clear-list');
+var allComments = [];
+
+var Comment = function(locationName, text) {
+    this.locationName = locationName;
+    this.text = text;
+};
+
+
+
 Store.prototype.calcCustomerEachHour = function(){
   for(var i = 0; i < openHours.length; i++){
     var randomCustomersPerHour = Math.floor(Math.random() * this.maxCustomersPerHour ) + this.minCustomersPerHour;

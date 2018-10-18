@@ -9,18 +9,46 @@
 
     <body>
 
-        <h1>Pat's Salmon Cookies</h1>
+        <h1>Pat's Salmon Cookies
+            
+        </h1>
         <!-- <ul id = "pike"></ul>
         <ul id = "airport"></ul>
         <ul id = "center"></ul>
         <ul id = "hill"></ul>
         <ul id = "alki"></ul> -->
+        
 
-        <table id="cookietable">  </table>            
-              
+        <form id="chat-form">
+                <fieldset>
+                  <legend>Pat's Salmon Cookies</legend>
+            
+                  <label for="locationName">Store: </label>
+                  <input name="location" type="text" size="15" required />
+            
+                  <label for="minCustomerPerHour">Minimum Customer Per Hour: </label>
+                  <input name="minCustomerPerHour" type="text" size="50" required />
 
+                  <label for="maxCustomerPerHour">Maximum Customer Per Hour: </label>
+                  <input name="maxCustomerPerHour" type="text" size="50" required />
 
+                  <label for="averageCustomerPerHour">Average Customer Per Hour: </label>
+                  <input name="averageCustomerPerHour" type="text" size="50" required />
+            
+                  <button type="submit">Create new store!</button>
+                </fieldset>
+              </form>
+               <button id="clear-chat-list">Clear</button>
+        
 
+        <table id="cookietable">  </table> 
+
+        <button>Submit</button>
+        <input type=text />
+        
+        
+        
+      
         <script type="text/javascript" src="js/app.js"></script> 
     </body>
 </html>
