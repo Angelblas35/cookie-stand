@@ -35,9 +35,36 @@ var clearList = document.getElementById('clear-list');
 var allComments = [];
 
 var Comment = function(locationName, text) {
-    this.locationName = locationName;
-    this.text = text;
+  this.locationName = locationName;
+  this.text = text;
 };
+
+Comment.prototype.render = function() {
+
+}
+
+function renderAllComments() {
+  locList.innerHTML = '';
+
+  for( var i = 0; i < allComments.length; i++) {
+    locList.appendChild(allComments[i].render());
+  }
+}
+
+function handleSubmit() {}
+
+event.preventDefault();
+
+cookieForm.addEventListener('click, handleSubmit');
+
+clearList.addEventListener('click', function() {}
+
+eventSubmit.addEventListener('click', handleSubmitClick);
+
+function handleSubmitClick(eventSubmit) {
+
+  console.log('This is functioning');
+}
 
 
 
@@ -158,7 +185,7 @@ function footerTotals(){
   thEl.textContent = 'Totals';
   trEl.appendChild(thEl);
   cookieTable.appendChild(trEl);
-  
+
   for (var k = 0; k < totalsForAllTheStore.length; k++){
     var tdEl = document.createElement('td');
     tdEl.textContent = totalsForAllTheStore[k];
