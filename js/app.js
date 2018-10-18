@@ -29,16 +29,17 @@ new Store(11,38,3.7,'seattleCenter');
 new Store(20,38,2.3,'capitolHill');
 new Store(2,16,4.6,'alki');
 
+var locList = document.getElementById('loc-list');
+var storeForm = document.getElementById('store-form');
+var clearList = document.getElementById('clear-list');
+var allComments = [];
+
 var Comment = function(locationName, text) {
     this.locationName = locationName;
     this.text = text;
 };
 
-// Comment.prototype.render = function() {
-//     var liEl = document.createElement ('li');
-//     liEl.innerHTML = 'img width = "100px" src="img/' +  this.locationName + 'jpg"> <b>' + this.locationName = ': <b/em>' + this.text + '</em>';
-//     return liEl;
-// }
+
 
 Store.prototype.calcCustomerEachHour = function(){
   for(var i = 0; i < openHours.length; i++){
