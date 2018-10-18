@@ -177,14 +177,14 @@ function cookieForm(event) {
   var name = event.target.storeLocation.value;
   var mincus = event.target.minCustomersPerHour.value;
   var maxcus = event.target.maxCustomersPerHour.value;
-  var avgcustomer = event.target.averageCustomerPerCustomer.value;
+  var avgcustomer = event.target.averageCookiesPerCustomer.value;
 
   var newLocation = new Store (name, mincus, maxcus, avgcustomer);
 
-  name = event.target.storeLocation.value = null;
-  mincus = event.target.minCustomersPerHour.value = null;
-  maxcus = event.target.maxCustomersPerHour.value = null;
-  avgcustomer = event.target.averageCustomerPerCustomer.value = null;
+  event.target.storeLocation.value = null;
+  event.target.minCustomersPerHour.value = null;
+  event.target.maxCustomersPerHour.value = null;
+  event.target.averageCookiesPerCustomer.value = null;
 
   cookieTable.innerHTML = '';
 
