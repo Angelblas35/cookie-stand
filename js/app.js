@@ -4,7 +4,7 @@
 var openHours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 var allStores = [];
-
+var cookieTable = document.getElementById('cookietable');
 
 
 // var storeTable = document.getElementById('store');
@@ -29,18 +29,8 @@ new Store(11,38,3.7,'seattleCenter');
 new Store(20,38,2.3,'capitolHill');
 new Store(2,16,4.6,'alki');
 
-var locList = document.getElementById('loc-list');
-var storeForm = document.getElementById('store-form');
-var clearList = document.getElementById('clear-list');
-var allComments = [];
 
-var Comment = function(locationName, text) {
-    this.locationName = locationName;
-    this.text = text;
-};
-
-
-
+//all prototype functions
 Store.prototype.calcCustomerEachHour = function(){
   for(var i = 0; i < openHours.length; i++){
     var randomCustomersPerHour = Math.floor(Math.random() * this.maxCustomersPerHour ) + this.minCustomersPerHour;
@@ -79,7 +69,6 @@ function callingAllStores() {
   }
 }
 callingAllStores();
-var cookieTable = document.getElementById('cookietable');
 
 
 function makeHeaderRow() {
@@ -104,7 +93,7 @@ makeHeaderRow();
 
 
 Store.prototype.render = function() {
-  cookieTable = document.getElementById('cookietable');
+
 
   var trEl = document.createElement('tr');
 
@@ -137,6 +126,8 @@ function renderAllStores() {
 }
 renderAllStores();
 
+
+
 function footerTotals(){
   var dailyLocationTotal = 0;
   var totalsForAllTheStore = [];
@@ -158,7 +149,7 @@ function footerTotals(){
   thEl.textContent = 'Totals';
   trEl.appendChild(thEl);
   cookieTable.appendChild(trEl);
-  
+
   for (var k = 0; k < totalsForAllTheStore.length; k++){
     var tdEl = document.createElement('td');
     tdEl.textContent = totalsForAllTheStore[k];
@@ -168,4 +159,109 @@ function footerTotals(){
 
 }
 footerTotals();
+
+
+var newStoreLocation = document.getElementById('chat-form');
+newStoreLocation.addEventListener('submit', cookieForm);
+
+function cookieForm(event) {
+  event.preventDefault(); // gotta have it for this purpose. prevents page reload on a 'submit' event
+
+  //  // Validation to prevent empty form fields
+  //  if (!event.target.storeLocation.value || !event.target.who.value || ) {
+  //   return alert('Fields cannot be empty!');
+  // }
+
+  //populate the instances
+
+  var name = event.target.storeLocation.value;
+  var mincus = event.target.minCustomersPerHour.value;
+  var maxcus = event.target.maxCustomersPerHour.value;
+  var avgcustomer = event.target.averageCookiesPerCustomer.value;
+
+  var newLocation = new Store (name, mincus, maxcus, avgcustomer);
+
+  event.target.storeLocation.value = null;
+  event.target.minCustomersPerHour.value = null;
+  event.target.maxCustomersPerHour.value = null;
+  event.target.averageCookiesPerCustomer.value = null;
+
+  cookieTable.innerHTML = '';
+
+  makeHeaderRow();
+
+  newLocation.calcCustomerEachHour();
+
+  newLocation.calcCookieEachHour();
+
+  newLocation.totalDailyCookies();
+
+  renderAllStores();
+
+  footerTotals();
+
+
+
+
+
+
+
+
+
+
+  //create the new instance
+
+  //call functions
+
+}
+
+
+// var locList = document.getElementById('loc-list');
+// var storeForm = document.getElementById('store-form');
+// var clearList = document.getElementById('clear-list');
+// var allComments = [];
+
+// var Comment = function(locationName, text) {
+//   this.locationName = locationName;
+//   this.text = text;
+// };
+
+// Comment.prototype.render = function() {
+
+// }
+
+// function renderAllComments() {
+//   locList.innerHTML = '';
+
+//   for( var i = 0; i < allComments.length; i++) {
+//     locList.appendChild(allComments[i].render());
+//   }
+// }
+
+// function handleSubmit() {}
+
+// event.preventDefault();
+
+// cookieForm.addEventListener('click, handleSubmit');
+
+// clearList.addEventListener('click', function() {}
+
+// eventSubmit.addEventListener('click', handleSubmitClick);
+
+// function handleSubmitClick(eventSubmit) {
+
+//   console.log('This is functioning');
+// }
+
+
+
+
+
+// var cookieTable = document.getElementById('cookietable');
+
+
+
+
+
+
 
