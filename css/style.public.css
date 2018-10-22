@@ -1,1 +1,15 @@
 body {background-color: rgb(131, 102, 114)}
+
+header { background-color: rgb(212, 52, 114);
+        margin-bottom: 40px;
+}
+
+h1{
+    font-size: 80px;
+    color: navy;
+
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
